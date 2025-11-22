@@ -1,0 +1,23 @@
+
+
+class Solution {
+    // Function to find equilibrium point in the array.
+    public static int findEquilibrium(int arr[]) {
+        // code here
+        int n=arr.length;
+        int tsum=0,sum=0;
+        for(int k:arr){
+            tsum+=k;
+        }
+        for(int i=0;i<n;i++){
+            tsum-=arr[i];
+            if(sum==tsum){
+                return i;
+            }
+            else{
+                sum+=arr[i];
+            }
+        }
+        return -1;
+    }
+}
