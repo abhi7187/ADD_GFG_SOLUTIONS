@@ -1,0 +1,25 @@
+
+
+//User function Template for Java
+
+class Solution {
+    int print2largest(int arr[], int n) {
+        // code here
+        /*for(int i=0;i<arr.length-1;i++){
+            for(int j=0;j<arr.length-1;j++){
+                if(arr[j]>arr[j+1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
+            }
+        }*/
+        Arrays.sort(arr);
+        for(int i=arr.length-1;i>=0;i--){
+            if(arr[arr.length-1]>arr[i]){
+                return arr[i];
+            }
+        }
+        return -1;
+    }
+}
